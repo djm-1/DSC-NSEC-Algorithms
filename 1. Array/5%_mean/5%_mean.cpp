@@ -19,17 +19,17 @@ void solve() {
   //taking input
   int n;
   cin>>n;
-  vector<int>arr(n);
+  vector<int>arr(n);  //space of specified size n is required....hence space complexity is O(n)
   for(int i=0;i<n;i++)
   {
       cin>>arr[i];
   }
 
   //sorting the array in ascending order
-  sort(arr.begin(),arr.end());
+  sort(arr.begin(),arr.end());     //STL sort takes O(n log n) time complexity
   int x=n/20;   // 5% of n= (n*5)/100 = n/20
   int sum=0;
-  for(int i=x;i<n-x;i++)
+  for(int i=x;i<n-x;i++)  // This step takes O(n) time
   {
       sum+=arr[i];
   }
@@ -48,3 +48,5 @@ int main() {
   }
   return 0;
 }
+// Required time complexity O(n log n)
+// Required space complexity O(n)
